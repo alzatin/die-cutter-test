@@ -367,16 +367,33 @@
       "compiledBom": []
     },
     {
+      "atomType": "Rectangle",
+      "name": "Rectangle",
+      "x": 0.21052631578947367,
+      "y": 0.6024844720496894,
+      "uniqueID": "id-51",
+      "ioValues": [
+        {
+          "name": "x length",
+          "ioValue": 300,
+          "currentEquation": "300"
+        },
+        {
+          "name": "y length",
+          "ioValue": 300,
+          "currentEquation": "300"
+        }
+      ]
+    },
+    {
       "atomType": "Import",
       "name": "Import",
-      "x": 0.2734778121775026,
-      "y": 0.6521739130434783,
-      "uniqueID": "id-49",
+      "x": 0.4613003095975233,
+      "y": 0.5217391304347826,
+      "uniqueID": "id-57",
       "ioValues": [],
-      "fileName": "311627.svg",
-      "type": "SVG",
-      "repoOwner": "alzatin",
-      "repoName": "die-cutter-test"
+      "fileName": null,
+      "type": null
     }
   ],
   "allConnectors": [],
