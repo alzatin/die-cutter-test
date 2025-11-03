@@ -369,48 +369,27 @@
     {
       "atomType": "Rectangle",
       "name": "Rectangle",
-      "x": 0.21052631578947367,
-      "y": 0.6024844720496894,
+      "x": 0.1826625386996904,
+      "y": 0.515527950310559,
       "uniqueID": "id-51",
       "ioValues": [
         {
           "name": "x length",
-          "ioValue": 300,
-          "currentEquation": "300"
+          "ioValue": 150,
+          "currentEquation": "150"
         },
         {
           "name": "y length",
-          "ioValue": 300,
-          "currentEquation": "300"
-        }
-      ]
-    },
-    {
-      "atomType": "Rotate",
-      "name": "Rotate",
-      "x": 0.5345717234262126,
-      "y": 0.2670807453416149,
-      "uniqueID": "id-59",
-      "ioValues": [
-        {
-          "name": "x-axis degrees",
-          "ioValue": 0
-        },
-        {
-          "name": "y-axis degrees",
-          "ioValue": 0
-        },
-        {
-          "name": "z-axis degrees",
-          "ioValue": 0
+          "ioValue": 150,
+          "currentEquation": "150"
         }
       ]
     },
     {
       "atomType": "Import",
       "name": "Import",
-      "x": 0.39422084623323017,
-      "y": 0.42857142857142855,
+      "x": 0.2590299277605779,
+      "y": 0.8322981366459627,
       "uniqueID": "id-65",
       "ioValues": [],
       "fileName": "31162712.svg",
@@ -419,17 +398,354 @@
       "repoName": "die-cutter-test"
     },
     {
-      "atomType": "Import",
-      "name": "Import",
-      "x": 0.36016511867905054,
-      "y": 0.7795031055900621,
-      "uniqueID": "id-67",
-      "ioValues": [],
-      "fileName": null,
-      "type": null
+      "atomType": "GitHubMolecule",
+      "name": "Scale",
+      "x": 0.40144478844169246,
+      "y": 0.7018633540372671,
+      "uniqueID": "id-74",
+      "ioValues": [
+        {
+          "name": "Scale Factor",
+          "ioValue": 10
+        }
+      ],
+      "topLevel": false,
+      "allAtoms": [
+        {
+          "atomType": "Output",
+          "name": "Output",
+          "x": 0.98,
+          "y": 0.5,
+          "uniqueID": "id-70",
+          "ioValues": []
+        },
+        {
+          "atomType": "Input",
+          "name": "Geometry",
+          "x": 0.0264,
+          "y": 0.16,
+          "uniqueID": "id-71",
+          "ioValues": [],
+          "type": "number"
+        },
+        {
+          "atomType": "Input",
+          "name": "Scale Factor",
+          "x": 0.0264,
+          "y": 0.24,
+          "uniqueID": "id-72",
+          "ioValues": [],
+          "type": "number"
+        },
+        {
+          "atomType": "Code",
+          "name": "Code",
+          "x": 0.4226190476190476,
+          "y": 0.25139664804469275,
+          "uniqueID": "id-73",
+          "ioValues": [
+            {
+              "name": "scaleFactor",
+              "ioValue": 10
+            }
+          ],
+          "codeVersion": 1,
+          "code": " \n      //Inputs:[inputShape, scaleFactor]\n      //This defines the molecules inputs and creates variables with the same names which can be referenced in the code\n      \n      //Takes the address and gets the shape from the library\n      let importedShape = library[inputShape]\n\n      let scaledShape = await Scale(inputShape, scaleFactor);\n      \n      \n      //Shapes stored in the library have tags, a color, a plane, and a bill of materials like this. We don't modify them here\n      let shape1 = {\n        geometry: [scaledShape],\n        tags: importedShape.tags,\n        color: importedShape.color,\n        plane: importedShape.plane,\n        bom: importedShape.bom\n      }\n      \n      return shape1\n      \n      \n      \n          /**\n          To Use the Code Atom, enter your inputs to the input list a.e Inputs:[shape, height]\n          If your input is connected to another atom with a replicad geometry you can access its geometry by looking up its ID in your library. a.e library[Input1].geometry[0] \n          Use any replicad available methods to modify your geometry. Learn more about all of the available methods at \n          https://replicad.xyz/docs/introapp/UserGuide.html \n          Return a replicad object that includes geometry, color, tags and plane. \n      \n      \n          Example Code Atom:\n      \n            Inputs:[shape, x];\n      \n            let finalShape = library[shape].geometry[0].clone.translate[x,0,0]\n      \n            return {geometry: finalShape, color: library[shape].color, plane: library[shape].plane, tags: library[shape].tags }\n      \n            - See more examples at _______ \n      \n      \n          */\n      "
+        }
+      ],
+      "allConnectors": [
+        {
+          "ap1Name": "number or geometry",
+          "ap2Name": "inputShape",
+          "ap1ID": "id-71",
+          "ap2ID": "id-73"
+        },
+        {
+          "ap1Name": "number or geometry",
+          "ap2Name": "scaleFactor",
+          "ap1ID": "id-72",
+          "ap2ID": "id-73"
+        },
+        {
+          "ap1Name": "output",
+          "ap2Name": "number or geometry",
+          "ap1ID": "id-73",
+          "ap2ID": "id-70"
+        }
+      ],
+      "parentRepo": {
+        "lastFoundGit": "2025-11-03T15:47:14.718Z",
+        "privateRepo": false,
+        "repoName": "Scale",
+        "dateCreated": "2025-06-26T17:06:11Z",
+        "likes": 0,
+        "readMe": "https://raw.githubusercontent.com/BarbourSmith/Scale/master/README.md?sanitize=true",
+        "yyyy": 2025,
+        "topMoleculeID": "4b6bc40a-44a9-438a-9ed9-ba4910815d8d",
+        "githubMoleculesUsed": [],
+        "html_url": "https://github.com/BarbourSmith/Scale",
+        "topics": [],
+        "parentRepo": null,
+        "forks": 0,
+        "dateModified": "739428",
+        "ranking": 2.1,
+        "searchField": "scale barboursmith scales the input 2d or 3d geometry by the scale factor ",
+        "owner": "BarbourSmith",
+        "description": "Scales the input 2D or 3D geometry by the scale factor",
+        "contentURL": "https://raw.githubusercontent.com/BarbourSmith/Scale/master/project.abundance?sanitize=true",
+        "svgURL": "https://raw.githubusercontent.com/BarbourSmith/Scale/master/project.svg?sanitize=true",
+        "isLocal": false
+      },
+      "unitsKey": "Unitless",
+      "fileTypeVersion": 1,
+      "compiledBom": []
+    },
+    {
+      "atomType": "Extrude",
+      "name": "Extrude",
+      "x": 0.6687306501547987,
+      "y": 0.7732919254658385,
+      "uniqueID": "id-92",
+      "ioValues": [
+        {
+          "name": "height",
+          "ioValue": 0.2,
+          "currentEquation": ".2"
+        }
+      ]
+    },
+    {
+      "atomType": "Assembly",
+      "name": "Assembly",
+      "x": 0.7285861713106295,
+      "y": 0.5434782608695652,
+      "uniqueID": "id-96",
+      "ioValues": [
+        {
+          "name": "Shape 1",
+          "ioValue": {
+            "geometry": "extrude-rectangle-150-150-{\"origin\":[0,0,0],\"xDir\":[1,0,0],\"normal\":[0,0,1]}-0.3",
+            "dimension": "3D",
+            "plane": {
+              "origin": [
+                0,
+                0,
+                0
+              ],
+              "xDir": [
+                1,
+                0,
+                0
+              ],
+              "normal": [
+                0,
+                0,
+                1
+              ]
+            },
+            "color": "#aad7f2",
+            "tags": [],
+            "bom": []
+          }
+        },
+        {
+          "name": "Shape 2",
+          "ioValue": {
+            "geometry": [
+              {
+                "geometry": "extrude-move-f56d8848-{\"geometry\":\"import-svg-85344d08\",\"tags\":[],\"plane\":{\"origin\":[0,0,0],\"xDir\":[1,0,0],\"normal\":[0,0,1]},\"color\":\"#aad7f2\",\"bom\":[],\"dimension\":\"2D\"}-10-1-0-0-0-{\"origin\":[0,0,0.3],\"xDir\":[1,0,0],\"normal\":[0,0,1]}-0.2",
+                "tags": [],
+                "plane": {
+                  "origin": [
+                    0,
+                    0,
+                    0.3
+                  ],
+                  "xDir": [
+                    1,
+                    0,
+                    0
+                  ],
+                  "normal": [
+                    0,
+                    0,
+                    1
+                  ]
+                },
+                "color": "#aad7f2",
+                "bom": [],
+                "dimension": "3D"
+              }
+            ],
+            "plane": {
+              "origin": [
+                0,
+                0,
+                0.3
+              ],
+              "xDir": [
+                1,
+                0,
+                0
+              ],
+              "normal": [
+                0,
+                0,
+                1
+              ]
+            },
+            "color": "#aad7f2",
+            "tags": [],
+            "bom": []
+          }
+        }
+      ]
+    },
+    {
+      "atomType": "Extrude",
+      "name": "Extrude",
+      "x": 0.544891640866873,
+      "y": 0.5714285714285714,
+      "uniqueID": "id-100",
+      "ioValues": [
+        {
+          "name": "height",
+          "ioValue": 0.3,
+          "currentEquation": "0.3"
+        }
+      ]
+    },
+    {
+      "atomType": "Move",
+      "name": "Move",
+      "x": 0.5500515995872033,
+      "y": 0.8198757763975155,
+      "uniqueID": "id-105",
+      "ioValues": [
+        {
+          "name": "xDist",
+          "ioValue": 0
+        },
+        {
+          "name": "yDist",
+          "ioValue": 0
+        },
+        {
+          "name": "zDist",
+          "ioValue": 0.3,
+          "currentEquation": ".3"
+        }
+      ]
+    },
+    {
+      "atomType": "Move",
+      "name": "Move",
+      "x": 0.6233230134158927,
+      "y": 0.3167701863354037,
+      "uniqueID": "id-111",
+      "ioValues": [
+        {
+          "name": "xDist",
+          "ioValue": 0
+        },
+        {
+          "name": "yDist",
+          "ioValue": 0
+        },
+        {
+          "name": "zDist",
+          "ioValue": 0.3,
+          "currentEquation": "0.3"
+        }
+      ]
+    },
+    {
+      "atomType": "Assembly",
+      "name": "Assembly",
+      "x": 0.8132094943240454,
+      "y": 0.3012422360248447,
+      "uniqueID": "id-117",
+      "ioValues": [
+        {
+          "name": "Shape 1",
+          "ioValue": {
+            "geometry": "move-extrude-rectangle-150-150-{\"origin\":[0,0,0],\"xDir\":[1,0,0],\"normal\":[0,0,1]}-0.3-0-0-0.3",
+            "dimension": "3D",
+            "plane": {
+              "origin": [
+                0,
+                0,
+                0
+              ],
+              "xDir": [
+                1,
+                0,
+                0
+              ],
+              "normal": [
+                0,
+                0,
+                1
+              ]
+            },
+            "color": "#aad7f2",
+            "tags": [],
+            "bom": []
+          }
+        }
+      ]
     }
   ],
-  "allConnectors": [],
+  "allConnectors": [
+    {
+      "ap1Name": "geometry",
+      "ap2Name": "geometry",
+      "ap1ID": "id-51",
+      "ap2ID": "id-100"
+    },
+    {
+      "ap1Name": "output",
+      "ap2Name": "Geometry",
+      "ap1ID": "id-65",
+      "ap2ID": "id-74"
+    },
+    {
+      "ap1Name": "geometry or number",
+      "ap2Name": "geometry",
+      "ap1ID": "id-74",
+      "ap2ID": "id-105"
+    },
+    {
+      "ap1Name": "geometry",
+      "ap2Name": "Shape 2",
+      "ap1ID": "id-92",
+      "ap2ID": "id-96"
+    },
+    {
+      "ap1Name": "geometry",
+      "ap2Name": "Shape 1",
+      "ap1ID": "id-100",
+      "ap2ID": "id-96"
+    },
+    {
+      "ap1Name": "geometry",
+      "ap2Name": "geometry",
+      "ap1ID": "id-100",
+      "ap2ID": "id-111"
+    },
+    {
+      "ap1Name": "geometry",
+      "ap2Name": "geometry",
+      "ap1ID": "id-105",
+      "ap2ID": "id-92"
+    },
+    {
+      "ap1Name": "geometry",
+      "ap2Name": "Shape 1",
+      "ap1ID": "id-111",
+      "ap2ID": "id-117"
+    }
+  ],
   "unitsKey": "MM",
   "fileTypeVersion": 1,
   "compiledBom": {},
