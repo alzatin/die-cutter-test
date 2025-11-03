@@ -18,8 +18,8 @@
     {
       "atomType": "Molecule",
       "name": "Molecule",
-      "x": 0.31785345717234265,
-      "y": 0.20186335403726707,
+      "x": 0.32094943240454077,
+      "y": 0.21428571428571427,
       "uniqueID": "12121704-6eed-4251-b297-8af161198dbd",
       "ioValues": [
         {
@@ -386,11 +386,44 @@
       ]
     },
     {
+      "atomType": "Rotate",
+      "name": "Rotate",
+      "x": 0.499484004127967,
+      "y": 0.5217391304347826,
+      "uniqueID": "id-59",
+      "ioValues": [
+        {
+          "name": "x-axis degrees",
+          "ioValue": 0
+        },
+        {
+          "name": "y-axis degrees",
+          "ioValue": 0
+        },
+        {
+          "name": "z-axis degrees",
+          "ioValue": 0
+        }
+      ]
+    },
+    {
       "atomType": "Import",
       "name": "Import",
-      "x": 0.4613003095975233,
-      "y": 0.5217391304347826,
-      "uniqueID": "id-57",
+      "x": 0.3849329205366357,
+      "y": 0.41304347826086957,
+      "uniqueID": "id-65",
+      "ioValues": [],
+      "fileName": "31162712.svg",
+      "type": "SVG",
+      "repoOwner": "alzatin",
+      "repoName": "die-cutter-test"
+    },
+    {
+      "atomType": "Import",
+      "name": "Import",
+      "x": 0.36016511867905054,
+      "y": 0.7795031055900621,
+      "uniqueID": "id-67",
       "ioValues": [],
       "fileName": null,
       "type": null
