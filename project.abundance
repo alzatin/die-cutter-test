@@ -119,8 +119,8 @@
     {
       "atomType": "CutLayout",
       "name": "Cut Layout",
-      "x": 0.8359133126934986,
-      "y": 0.7360248447204969,
+      "x": 0.7461300309597524,
+      "y": 0.8633540372670808,
       "uniqueID": "id-122",
       "ioValues": [
         {
@@ -792,6 +792,31 @@
       "unitsKey": "Unitless",
       "fileTypeVersion": 1,
       "compiledBom": []
+    },
+    {
+      "atomType": "Export",
+      "name": "Export",
+      "x": 0.8864809081527348,
+      "y": 0.7919254658385093,
+      "uniqueID": "id-325",
+      "ioValues": [
+        {
+          "name": "File Type",
+          "ioValue": "STL"
+        },
+        {
+          "name": "Resolution (dpi)",
+          "ioValue": 96
+        },
+        {
+          "name": "Part Name",
+          "ioValue": "die-cutter-test"
+        }
+      ],
+      "type": null,
+      "resolution": 96,
+      "importIndex": 0,
+      "partName": "die-cutter-test"
     }
   ],
   "allConnectors": [
@@ -848,6 +873,12 @@
       "ap2Name": "number or geometry",
       "ap1ID": "id-215",
       "ap2ID": "82454b26-024e-4730-ab9a-a465ab26af5b"
+    },
+    {
+      "ap1Name": "geometry",
+      "ap2Name": "geometry",
+      "ap1ID": "id-215",
+      "ap2ID": "id-325"
     },
     {
       "ap1Name": "geometry or number",
