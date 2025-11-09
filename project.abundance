@@ -138,8 +138,8 @@
     {
       "atomType": "Fusion",
       "name": "Fusion",
-      "x": 0.7774451097804391,
-      "y": 0.5186335403726707,
+      "x": 0.7799490229396772,
+      "y": 0.7670807453416149,
       "uniqueID": "id-215",
       "ioValues": [
         {
@@ -462,7 +462,30 @@
             },
             {
               "name": "Shape 2",
-              "ioValue": null
+              "ioValue": {
+                "geometry": "cut-extrude-rectangle-50-10-{\"origin\":[0,0,0],\"xDir\":[1,0,0],\"normal\":[0,0,1]}-10-f986c0bc-2-10-3.3333333333333335-3-10-{\"geometry\":\"extrude-rectangle-50-10-{\\\"origin\\\":[0,0,0],\\\"xDir\\\":[1,0,0],\\\"normal\\\":[0,0,1]}-10\",\"dimension\":\"3D\",\"plane\":{\"origin\":[0,0,0],\"xDir\":[1,0,0],\"normal\":[0,0,1]},\"color\":\"#aad7f2\",\"tags\":[],\"bom\":[]}-11",
+                "dimension": "3D",
+                "plane": {
+                  "origin": [
+                    0,
+                    0,
+                    0
+                  ],
+                  "xDir": [
+                    1,
+                    0,
+                    0
+                  ],
+                  "normal": [
+                    0,
+                    0,
+                    1
+                  ]
+                },
+                "color": "#aad7f2",
+                "tags": [],
+                "bom": []
+              }
             }
           ]
         },
@@ -690,8 +713,8 @@
     {
       "atomType": "GitHubMolecule",
       "name": "Scale",
-      "x": 0.6615067079463365,
-      "y": 0.43788819875776397,
+      "x": 0.6049277824978759,
+      "y": 0.4347826086956522,
       "uniqueID": "id-313",
       "ioValues": [
         {
